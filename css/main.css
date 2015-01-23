@@ -1,0 +1,195 @@
+html .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+  color: white;
+}
+li a{
+  text-decoration: none;
+  color: white;
+}
+ul {
+  text-decoration: none;
+  color:white;
+}
+li {
+  list-style-type: none;
+  color:white;
+}
+.Pelicula p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+.Pelicula {
+  text-decoration: none;
+  padding: 10px 10px;
+  padding-right: 0px;
+  border-bottom: 2px solid #561D61; 	
+}
+progress {
+  height: 12px;
+  background: #ebedef;
+  border-radius: 5px;
+  box-shadow: none;
+}
+html .ui-page-theme-a .boton{
+  margin: 20px auto;
+  max-width: 508px ;
+}
+
+body, input, select, textarea, button, .ui-btn { 
+  font-family: "Sansation-Light";
+  font-size: 1em;
+  
+}
+
+
+
+
+html .ui-overlay-a, html .ui-page-theme-a, html .ui-page-theme-a .ui-panel-wrapper {
+  background: #f9f2f9	;
+  border-color: #bbb;
+  color: #333;
+  background-color: black;
+  font-size: 1.2em;
+}
+
+html .ui-bar-a, html .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+  border-color: white;
+  
+}
+html .ui-bar-a,html .ui-page-theme-a .ui-bar-inherit,html .ui-bar-a .ui-bar-inherit,html .ui-body-a .ui-bar-inherit,html body .ui-group-theme-a .ui-bar-inherit{background:#17178f;border-color:#2c3e50;color:#fff;font-weight:bold
+  font-size:40em;
+}
+
+
+.ui-header .ui-title, .ui-footer .ui-title{
+  
+  
+  
+  
+}
+
+html .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html body .ui-btn.ui-btn-a, html .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html body .ui-btn.ui-btn-a:visited{
+  
+  border: 2px solid #7C5267;
+  background-color: black;
+  font-size: 1em;
+  
+}
+
+html .ui-bar-a, html .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+  
+  background: #671676;
+  border-color: #2c3e50;
+  color: #fff;
+  font-weight: bold font-size:4em;
+  font-size: 1.2em;
+}
+
+
+
+html .ui-page-theme-a {
+  color:white;
+}
+html .ui-page-theme-a a:active,html .ui-bar-a a:active,html .ui-body-a a:active,html body .ui-group-theme-a a:active{color:white}
+
+
+
+html .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+  color: white;
+  font-weight: bold;
+}
+html .ui-overlay-a, html .ui-page-theme-a, html .ui-page-theme-a .ui-panel-wrapper{
+  color:white;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title{
+  font-size: 0.8em;
+  margin: 5px 65px;
+/*   margin-left:70px; */
+}
+
+/*input.ui-slider-input {
+    display : hide !important;
+}*/
+.ui-slider {
+
+    margin-left: -50px !important;
+}
+.ui-preload-loader-image-1{
+  background: url("images/loader.gif");
+  background-size: 2.875em 2.875em;
+  
+}
+.ui-preload-loader-image-2{
+  background: url("images/bocina.gif");
+  background-size: -999999995px -999999999px;
+}  
+
+
+
+#container_subtitles{
+  width: 100%;
+  font-size: 1.5em; 
+}
+
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(fonts/Quicksand.woff) format('woff');
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+h1{
+  font-weight:  normal;
+}
+body, input, select, textarea, button, .ui-btn { 
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  font-weight:  normal;
+  
+}
+
+html .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+  color: white;
+  font-weight: normal;
+}
+#sub_position {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+ 
+
+input.busqueda {
+  border-radius: 5px;
+  margin: 1em 0;
+  line-height: 1.7em;
+}
+
+
+#busqueda .ui-btn.ui-input-btn{
+  padding: 0.5em;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+#info .content{
+  font-size: 0.8em;
+  color:white !important;
+}
+
+
+.ui-header .ui-title, .ui-footer .ui-title{
+  overflow:  visible;
+  white-space: normal;
+  text-overflow: initial;
+}

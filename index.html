@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Cine APP </title>
+
+  <meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
+  <link rel="stylesheet" href="css/themes/azul-negro.min.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.3.min.css" /> 
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/jquery-1.11.1.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.mobile-1.4.3.min.js"></script> 
+  
+
+
+  
+<!--   <script type="text/javascript" src="js/fastclick.js"></script>  -->
+</head>
+<!--  
+para los botones se utilizan links <a> apuntando a funciones javascript para evitar glitches en el audio de talkback de android que ocurren al utilizar <button>
+-->
+
+<!--<body onload="initFastButtons();" bgcolor="#000000">-->
+<body bgcolor="#000000">
+
+<!-- <span id="fastclick"> -->
+
+<div data-role="page" id="inicio">
+
+  <div data-role="header">
+
+	 <h1>MENÚ PRINCIPAL</h1>
+    
+  </div>
+
+  <div  style="margin-top: 50px" class="ui-boton-box">
+	
+	<a href='#cartelera' padding data-icon="flat-settings" data-theme="a" class=" boton btn-block ui-btn ui-btn-a ui-shadow ui-corner-all btn-block">Películas en cartelera</a>
+	
+	
+	
+	<a href='#mispeliculas' data-icon="flat-settings" data-theme="a" class=" boton btn-block ui-btn ui-btn-a ui-shadow ui-corner-all menu">Mis películas</a>
+	<a href='#busqueda' data-icon="flat-settings" data-theme="a" class=" boton btn-block ui-btn ui-btn-a ui-shadow ui-corner-all"  >Buscador</a>
+	
+  <a href='#info' data-icon="flat-settings" data-theme="a" class=" boton btn-block ui-btn ui-btn-a ui-shadow ui-corner-all"  >Información</a>
+  
+
+  </div>
+      
+</div>
+
+<div data-role="page" id="pelicula_local">
+
+  <div data-role="header">
+
+          <a data-iconpos="notext" data-role="button" data-icon="home"  href='#inicio' title="Volver al menú">Volver</a>
+      <h1>SINOPSIS</h1>
+  </div>
+  <div class="Pelicula">
+    <div id="titulo" class="Pelicula">
+      <p id="titulop"> </p>
+    </div>
+  <div id="descripcion_local">
+    <p id="descripcionp_local"> </p>
+  </div>
+<!--   <p>Sinopsis</p> -->
+<!--   <p> ¿Serán dos taxistas colombianos los "elegidos" por la Virgen del Carmen para una Misión Divina a Brasil en pleno Mundial de fútbol? “Nos vamos pal Mundial”...</p> -->
+  </div>
+  <div  style="margin-top: 30px">
+       <a href='javascript:pelicula_reproducir()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Reproducir Audiodescripción</a>
+       <a href='javascript:pelicula_borrar()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Eliminar Audiodescripción</a>
+       <a href='javascript:subtitulo_descargar()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Sincronizar Subtitulos</a>
+
+<!--       <a data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Descargar subtitulos</a> -->
+
+<!--       <a data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Descargar Señas</a> -->
+  
+    </div>    
+</div>
+
+<div data-role="page" id="pelicula_cartelera">
+
+  <div data-role="header">
+
+          <a data-iconpos="notext" data-role="button" data-icon="home"  href='#inicio' title="Volver al menú">Volver</a>
+      <h1>SINOPSIS</h1>
+  </div>
+  <div class="Pelicula">
+    <div id="titulo_cartelera" class="Pelicula">
+      <p id="titulop_cartelera"> </p>
+    </div>
+<br>
+<!--   <p>Sinopsis</p> -->
+ <div id="descripcion_cartelera">
+  <p id="descripcionp_cartelera"> </p>
+  </div>
+ </div>
+  <div  style="margin-top: 30px">
+       <a href='javascript:pelicula_descargar_reproducir()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Reproducir Audiodescripción</a>
+       <a href='javascript:pelicula_descargar()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Descargar Audiodescripción</a>
+      <a href='javascript:subtitulos_descargar_reproducir()' data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Sincronizar subtitulos</a>
+      
+      <!-- <a data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Descargar subtitulos</a> -->
+
+      <!-- <a data-icon="flat-settings" data-theme="a" class="  boton ui-btn ui-btn-a ui-icon-flat-settings ui-shadow ui-corner-all">Descargar Señas</a> -->
+  
+    </div>    
+</div>
+
+<div data-role="page" id="cartelera">
+ 
+    <div data-role="header">
+              <a data-iconpos="notext" data-role="button" data-icon="home"  href='#inicio' title="Volver al menú">Volver</a>
+          <h1>Cartelera</h1>
+    </div>
+    <div id="cartelera_peliculas">
+      <div class="Pelicula">
+        <a href="#pelicula">
+
+        </a>
+      </div>  
+    </div>  
+</div>
+
+
+<div data-role="page" id="listado">
+ 
+    <div data-role="header">
+              <a data-iconpos="notext" data-role="button" data-icon="home"  href='#inicio' title="Volver al menú">Volver</a>
+          <h1>Resultado búsqueda</h1>
+    </div>
+    <div id="listado_peliculas">
+      <div class="Pelicula">
+        <a href="#pelicula">
+
+        </a>
+      </div>  
+    </div>  
+</div>
+
+<div data-role="page" id="mispeliculas">
+ 
+<div data-role="header">
+          <a data-iconpos="notext" data-role="button" data-icon="home"  href='#inicio' title="Volver al menú">Volver</a>
+      <h1>Mis peliculas</h1>
+</div>
+<div id="mispeliculas_peliculas">
+<div class="Pelicula">
+<a href="#pelicula">
+....
+</a>
+</div>  
+</div>
+
+</div>
+
+<div data-role="page" id="capture" style="text-align:center">
+  <div data-role="header">
+      <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+      <h1>Capturando</h1>
+  </div>
+
+<!--  <a href="#audiodescripcion" style="position:absolute;width:10000px;height:100000px;top:0px;left:0px:"></a>
+-->  
+  <p>Capturando Audio</p>
+<!--  <div><input type="range" id="rec_progress" data-highlight="true" min="0" max="100" value="0"></div>-->
+  <p id="rec_position">0</p>   
+
+  <img src="css/images/loader.gif" alt="" >
+
+</div>
+
+<div data-role="page" id="sync" style="text-align:center">
+  <div data-role="header">
+      <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+
+      <h1>Sincronizando</h1>
+  </div>
+<!--  <a href="#audiodescripcion" style="position:absolute;width:10000px;height:100000px;top:0px;left:0px:"></a>
+-->  
+  <p>Sincronizando audio con el servidor</p>
+  <img src="css/images/loader.gif" alt="" >
+</div>
+
+<div data-role="page" id="download" style="text-align:center">
+  <div data-role="header">
+      <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+
+      <h1>Bajando</h1>
+  </div>
+<!--  <a href="#audiodescripcion" style="position:absolute;width:10000px;height:100000px;top:0px;left:0px:"></a>
+-->  
+  <p>Bajando audio descripción</p>
+  <img src="css/images/loader.gif" alt="" >
+</div>
+
+<div data-role="page" id="download_sub" style="text-align:center">
+  <div data-role="header">
+      <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+
+      <h1>Bajando</h1>
+  </div>
+<!--  <a href="#audiodescripcion" style="position:absolute;width:10000px;height:100000px;top:0px;left:0px:"></a>
+-->  
+  <p>Bajando Subtitulos</p>
+  <img src="css/images/loader.gif" alt="" >
+</div>
+
+<div data-role="page" id="play" style="text-align:center">
+  <div data-role="header">
+    <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+    <h1>Audiodescripción</h1>
+  </div>
+
+  <p>Reproduciendo</p>
+<!--  <div><input type="range"  id="play_progress" name="progress2" data-highlight="true" min="0" max="100" value="50"></div>-->
+  <p id="play_position">0</p>
+  <img src="css/images/bocina.gif" alt="" >
+</div>
+ 
+<div data-role="page" id="busqueda" style="text-align:center">
+  <div data-role="header">
+    <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+    <h1>Busqueda de peliculas</h1>
+
+   
+  </div>
+
+  <form id="formularioBusqueda">
+     <input type="text" name="namePelicula"  data-role="none" class="busqueda" placeholder="Nombre de la pelicula" id="NombrePelicula"><br>
+    <input type="submit" value="Buscar pelicula" class="enviarBoton" id="enviarBoton">
+  </form>
+
+
+</div>
+
+
+<div data-role="page" id="info" style="text-align:center">
+  <div data-role="header">
+    <button data-iconpos="notext" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+    <h1>Información de aplicacion</h1>
+
+   
+  </div>
+
+  <div class="content" style="color:#2B303F; padding: 0 1em;">
+
+    <p>
+        Version: 1.0
+    </p>
+    
+    
+    
+    <img class="img_entidad" src="images/logo_mintic.png" alt="">
+    <p>Tenga en cuenta que esta aplicación requiere acceso a internet y puede consumir recursos de su plan de datos.</p>
+
+    <h4>Autores</h4>
+    <ul>
+        <li>Andres Fabian Corredor</li>
+        <li>Vivian Gutierrez Galindo</li>
+    </ul>
+    <p>© Derechos Reservados</p>
+    <p style="height:400px">
+        
+    </p>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div data-role="page" id="play_subtitle" style="text-align:center">
+  <button data-iconpos="notext" style="background-color: #7C5267; opacity: 0.7;" data-role="button" data-icon="home" onCLick="backButtonHandler();" title="Volver al menu">Volver</button>
+  
+  
+
+  
+  <div id="container_subtitles"></div>
+    <p id="sub_position">0</p>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="main.js">
+
+</script>
+<script type="text/javascript" src="js/subtitles.js"></script> 
+<script type="text/javascript" src="js/busqueda.js"></script>
+
+</html>
